@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollview">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollLinearView"
+            android:orientation="vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="45dp"
+                android:id="@+id/profile_image"
+                android:src="@mipmap/profile_image"
+                android:layout_marginLeft="95dp"
+                android:layout_marginRight="95dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="15dp"
+                    android:textAlignment="center"
+                    android:text="Registering as PATIENT"
+                    android:layout_weight="8"
+                    />
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/set_user_name"
+                android:layout_below="@+id/profile_image"
+                android:hint="Username"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="17dp"
+
+                android:textColor="@color/black"
+                android:layout_marginRight="17dp"
+                android:inputType="text"
+                android:padding="4dp"
+                android:textSize="20sp"
+                android:layout_alignParentLeft="true"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/set_user_age"
+                android:layout_below="@+id/set_user_name"
+                android:hint="Age"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="17dp"
+
+                android:textColor="@color/black"
+                android:layout_marginRight="17dp"
+                android:inputType="number"
+                android:padding="4dp"
+                android:textSize="20sp"
+                android:layout_alignParentLeft="true"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/doctor_layout"
+                android:visibility="invisible">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Specialization In "
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="17dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:padding="4dp"
+                        ></TextView>
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinner1"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="20dp"
+                        android:spinnerMode="dropdown"></Spinner>
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Years of Experience"
+                    android:layout_marginLeft="17dp"
+                    android:id="@+id/yearsOfExperience"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
+                    android:padding="4dp"
+                    android:textSize="20sp"></EditText>
+            </LinearLayout>
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkbox1"
+                android:text="  I, hereby agree to all the terms and conditions of this organisation"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+            </com.google.android.material.checkbox.MaterialCheckBox>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/updatingAccount"
+                android:padding="4dp"
+                android:backgroundTint="@color/newColor3"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="19dp"
+                android:layout_marginRight="19dp"
+                android:text="Next Step"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textSize="24sp"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>
